@@ -9,4 +9,8 @@ router.get("/random", ApiController.random);
 
 router.get("/nome/:nome", ApiController.nome);
 
+router.post("/frases", ApiController.createPhrase);
+
+router.get("/frases", ApiController.listPhrases);
+
 export default router;
