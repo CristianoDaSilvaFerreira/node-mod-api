@@ -1,21 +1,12 @@
 import { Request, Response, Router } from "express";
+import * as ApiController from "../controllers/apiController";
 
 const router = Router();
 
-router.get("/ping", (req: Request, res: Response) => {
-  res.json({ pong: true });
-});
+router.get("/ping", ApiController.ping);
 
-router.get("/random", (req: Request, res: Response) => {
-  let nRand: number = Math.floor(Math.random() * 100);
+router.get("/random", ApiController.random);
 
-  res.json({ number: nRand });
-});
-
-router.get("/nome/:nome", (req: Request, res: Response) => {
-  let nome: string = req.params.nome;
-
-  res.json({ nome: `Você enviou o nome: ${nome}` });
-});
+router.get("/nome/:nome", ApiController.nome);
 
 export default router;
