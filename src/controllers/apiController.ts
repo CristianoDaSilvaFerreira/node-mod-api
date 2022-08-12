@@ -32,3 +32,17 @@ export const listPhrases = async (req: Request, res: Response) => {
 
   res.json({ list });
 };
+
+export const getPhrases = async (req: Request, res: Response) => {
+  let { id } = req.params;
+
+  let phrase = await Phrase.findByPk(id);
+
+  if (phrase) {
+    res.json({ phrase });
+  } else {
+    res.json({
+      error: `Não foi encontrada nenhuma frase com o ID ${id} informado.`,
+    });
+  }
+};

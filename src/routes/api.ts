@@ -13,4 +13,7 @@ router.post("/frases", ApiController.createPhrase);
 
 router.get("/frases", ApiController.listPhrases);
 
+router.get("/frase/:id", ApiController.getPhrases);
+
+
 export default router;
