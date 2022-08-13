@@ -15,5 +15,7 @@ router.get("/frases", ApiController.listPhrases);
 
 router.get("/frase/:id", ApiController.getPhrases);
 
+router.put("/frase/:id", ApiController.updatePhrases);
+
 
 export default router;
