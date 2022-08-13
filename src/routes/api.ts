@@ -13,11 +13,15 @@ router.post("/frases", ApiController.createPhrase);
 
 router.get("/frases", ApiController.listPhrases);
 
+router.get("/frase/:aleatoria", ApiController.randomPhrases);
+
 router.get("/frase/:id", ApiController.getPhrases);
 
 router.put("/frase/:id", ApiController.updatePhrases);
 
 router.delete("/frase/:id", ApiController.deletePhrases);
+
+
 
 
 
